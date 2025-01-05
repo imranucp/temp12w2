@@ -26,5 +26,7 @@ jobs:
         run: npm init stylelint
       - name: Lint CSS Files
         run: npx stylelint --fix "**/*.css"
+      - name: List the Contents of Package.json
+        run: cat package.json
     
     
