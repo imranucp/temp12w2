@@ -23,7 +23,7 @@ jobs:
       - name: Lint HTML with HTMLhint
         run: npx htmlhint "**/*.html"
       - name: Install StyleLint
-        run: npm install --save-dev stylelint stylelint-config-standard-css
+        run: npm init stylelint
       - name: Lint CSS Files
         run: npx stylelint "**/*.css"
     
