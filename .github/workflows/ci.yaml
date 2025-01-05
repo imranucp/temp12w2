@@ -25,6 +25,6 @@ jobs:
       - name: Install StyleLint
         run: npm init stylelint
       - name: Lint CSS Files
-        run: npx stylelint "**/*.css"
+        run: npx stylelint --fix "**/*.css"
     
     
