@@ -18,15 +18,22 @@ jobs:
         uses: actions/setup-node@v4
       - name: Check Node Version
         run: node --version
-      - name: Install HTMLHint
-        run: npm install --save-dev htmlhint
-      - name: Lint HTML with HTMLhint
-        run: npx htmlhint "**/*.html"
-      - name: Install StyleLint
-        run: npm init stylelint
-      - name: Lint CSS Files
-        run: npx stylelint --fix "**/*.css"
-      - name: List the Contents of Package.json
+    #   - name: Install HTMLHint
+    #     run: npm install --save-dev htmlhint
+    #   - name: Lint HTML with HTMLhint
+    #     run: npx htmlhint "**/*.html"
+    #   - name: Install StyleLint
+    #     run: npm init stylelint
+    #   - name: Lint CSS Files
+    #     run: npx stylelint --fix "**/*.css"
+    #   - name: List the Contents of Package.json
+    #     run: cat package.json
+      - name: View Contents of Package.Json
         run: cat package.json
-    
+      - name: Install Dev Dependencies
+        run: npm install
+      - name: Run HTMLHint
+        run: npx htmlhint "**/*.html"
+      - name: RUN StyleLint
+        run: npx stylelint --fix "**/*.html"    
     
